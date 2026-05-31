@@ -14,3 +14,15 @@ jobs:
 
       - name: "List what's inside"
         run: ls
+
+      - name: "Install Java"
+        uses: actions/setup-java@v4
+        with:
+          java-version: "17"
+          distribution: "temurin"
+          cache: "maven"
+
+      - name: "Verify installation"
+        run: |
+          java -version
+          mvn -version
