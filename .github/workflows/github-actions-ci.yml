@@ -1,0 +1,12 @@
+name: GitHub Actions Continuous Integration
+run-name: ${{ github.actor }} is testing out GitHub Actions
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - run: echo "Hello world"
