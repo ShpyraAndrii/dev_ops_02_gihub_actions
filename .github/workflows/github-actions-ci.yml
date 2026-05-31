@@ -26,3 +26,9 @@ jobs:
         run: |
           java -version
           mvn -version
+
+      - name: "Build Application"
+        run: mvn clean package
+
+      - name: "Test Application"
+        run: mvn test
